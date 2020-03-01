@@ -4,6 +4,10 @@ import { withNavigation } from 'react-navigation'
 import ResultSingle from './ResultSingle'
 
 const ResultsList = ({ title, results, navigation }) => {
+    if (!result.length) {
+        return null
+    }
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
